@@ -1,0 +1,93 @@
+﻿@model IEnumerable<TopicalInfoApp.Models.Champion>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>League of Legends: Champions</h2>
+
+@using (Html.BeginForm())
+{
+<div id="FilteredSearch" class="form-horizontal">
+
+    <div class="form-group">
+        @Html.Label("Search by Name", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.TextBox("searchBy", null, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Filter by Class", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.DropDownList("classFilter",
+                    new SelectList(@ViewBag.Classes),
+                    "All Cities",
+                    new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Find Champion" class="btn col-md-2 col-md-offset-2" />
+        <input type="button" value="Reset Champion List" onclick="location.href='@Url.Action("Index", "Champion")'" class="btn col-md-2 col-md-offset-2" />
+    </div>
+</div>
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink(Html.DisplayNameFor(model =>model.Name).ToHtmlString(), "Index", new { sortOrder = "Name"})
+        </th>
+        <th>
+            @Html.ActionLink(Html.DisplayNameFor(model => model.Class).ToHtmlString(), "Index", new { sortOrder = "Class" })
+        </th>
+        <th>
+            @Html.ActionLink(Html.DisplayNameFor(model => model.BaseHealth).ToHtmlString(), "Index", new { sortOrder = "Base Health" })
+        </th>
+        <th>
+            @Html.ActionLink(Html.DisplayNameFor(model => model.BaseMana).ToHtmlString(), "Index", new { sortOrder = "Base Mana" })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseArmor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseMagicResist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseAttackDamage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseHealth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseMana)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseArmor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseMagicResist)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseAttackDamage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

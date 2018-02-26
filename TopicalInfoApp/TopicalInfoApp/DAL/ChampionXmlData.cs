@@ -8,7 +8,7 @@ using TopicalInfoApp.Models;
 
 namespace TopicalInfoApp.DAL
 {
-    public class ChampionXmlData : IDisposable
+    public class ChampionXmlData : IChampionDataServices, IDisposable
     {
         public List<Champion> Read()
         {
@@ -41,6 +41,7 @@ namespace TopicalInfoApp.DAL
         {
 
         }
+
     }
 
 }
