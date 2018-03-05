@@ -83,8 +83,27 @@ namespace TopicalInfoApp.DAL
         #region Helper Method(s)
         private int getNextId()
         {
-            int currentMax = _champions.Last().Id;
-            return currentMax + 1;
+            int x = 0;
+            int maxId = 0;
+            int currentId = 0;
+            while (x <= _champions.Count)
+            {
+
+                if (x != _champions.Count)
+                { 
+                    currentId = _champions[x].Id;
+
+                    if (currentId > maxId)
+                    {
+                        maxId = currentId;
+                    }
+                }
+                 
+
+                x++;
+            }
+
+            return maxId + 1;
         }
         #endregion
     }

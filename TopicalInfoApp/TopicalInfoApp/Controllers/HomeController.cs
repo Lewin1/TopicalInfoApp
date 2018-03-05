@@ -13,13 +13,13 @@ namespace TopicalInfoApp.Controllers
         public ActionResult Index()
         {
 
-            //Temp code so that the xml file would write itself
-            List<Champion> champions = new List<Champion>();
-            champions = StartingData.GetAllChampion() as List<Champion>;
-            ChampionRepository championRepository = new ChampionRepository();
+            //Temp code to reset seed data
+            //List<Champion> champions = new List<Champion>();
+            //champions = StartingData.GetAllChampion() as List<Champion>;
+            //ChampionRepository championRepository = new ChampionRepository();
 
-            championRepository._champions = champions;
-            championRepository.Save();
+            //championRepository._champions = champions;
+            //championRepository.Save();
             //End of temp code block
 
             return View();

@@ -160,6 +160,23 @@
     <Content Include="App_Data\ChampionsData.xml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\LoL-Background.jpg" />
+    <Content Include="Content\Images\ProfilePics\Ashe.png" />
+    <Content Include="Content\Images\ProfilePics\Chogath.png" />
+    <Content Include="Content\Images\ProfilePics\Ekko.png" />
+    <Content Include="Content\Images\ProfilePics\Galio.png" />
+    <Content Include="Content\Images\ProfilePics\Jhin.png" />
+    <Content Include="Content\Images\ProfilePics\Kayn.png" />
+    <Content Include="Content\Images\ProfilePics\Lux.png" />
+    <Content Include="Content\Images\ProfilePics\Nasus.png" />
+    <Content Include="Content\Images\ProfilePics\Ryze.png" />
+    <Content Include="Content\Images\ProfilePics\Taric.png" />
+    <Content Include="Content\Images\ProfilePics\Veigar.png" />
+    <Content Include="Content\Images\ProfilePics\Yorick.png" />
+    <Content Include="Content\Images\ProfilePics\Zed.png" />
+    <Content Include="Content\Images\ProfilePics\Zilean.png" />
+    <Content Include="Content\Images\ProfilePics\Zoe.png" />
+    <Content Include="Content\NightlyBootstrap.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -169,6 +186,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\TopicalInforamtionAppLewin1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -193,6 +211,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Champion\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Champion\Details.cshtml" />
+    <Content Include="Views\Champion\Create.cshtml" />
+    <Content Include="Views\Champion\Edit.cshtml" />
+    <Content Include="Views\Champion\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

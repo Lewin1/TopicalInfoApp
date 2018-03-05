@@ -10,6 +10,8 @@ namespace TopicalInfoApp.Controllers
 {
     public class ChampionController : Controller
     {
+
+        #region Index
         // GET: Champion
         [HttpGet]
         public ActionResult Index(string sortOrder)
@@ -74,26 +76,44 @@ namespace TopicalInfoApp.Controllers
 
             return View(champions);
         }
-        
+
+        #endregion
+
+        #region Details
         // GET: Champion/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Champion champ = GetChampionById(id);
+            
+            return View(champ);
         }
 
+        #endregion
+
+        #region Create
         // GET: Champion/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Champion/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Champion newChamp)
         {
             try
             {
-                // TODO: Add insert logic here
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+
+                ChampionRepository championRepository = new ChampionRepository();
+
+                using (championRepository)
+                {
+                    championRepository.Insert(newChamp);
+                }
 
                 return RedirectToAction("Index");
             }
@@ -103,19 +123,35 @@ namespace TopicalInfoApp.Controllers
             }
         }
 
+        #endregion
+
+        #region Edit
         // GET: Champion/Edit/5
+        [HttpGet]
         public ActionResult Edit(int id)
         {
-            return View();
+            Champion champ = GetChampionById(id);
+
+            return View(champ);
         }
 
         // POST: Champion/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Champion champ)
         {
             try
             {
-                // TODO: Add update logic here
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+
+                ChampionRepository championRepository = new ChampionRepository();
+
+                using (championRepository)
+                {
+                    championRepository.Update(champ);
+                }
 
                 return RedirectToAction("Index");
             }
@@ -125,19 +161,29 @@ namespace TopicalInfoApp.Controllers
             }
         }
 
+        #endregion
+
+        #region Delete
+        [HttpGet]
         // GET: Champion/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            
+            return View(GetChampionById(id));
         }
 
         // POST: Champion/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(Champion champ)
         {
             try
             {
-                // TODO: Add delete logic here
+                ChampionRepository championRepository = new ChampionRepository();
+
+                using (championRepository)
+                {
+                    championRepository.Delete(champ.Id);
+                }
 
                 return RedirectToAction("Index");
             }
@@ -147,6 +193,9 @@ namespace TopicalInfoApp.Controllers
             }
         }
 
+        #endregion
+
+        #region Helper Methods
         [NonAction]
         private IEnumerable<string> ListOfClasses()
         {
@@ -162,5 +211,25 @@ namespace TopicalInfoApp.Controllers
 
             return classes;
         }
+
+        private Champion GetChampionById (int id)
+        {
+            Champion champ = new Champion();
+
+
+            ChampionRepository championRepository = new ChampionRepository();
+
+            IEnumerable<Champion> champions;
+            using (championRepository)
+            {
+                champions = championRepository.GetAllChampions() as IList<Champion>;
+            }
+
+            champ = champions.Where(c => c.Id == id).FirstOrDefault();
+
+            return champ;
+        }
+
+        #endregion
     }
 }

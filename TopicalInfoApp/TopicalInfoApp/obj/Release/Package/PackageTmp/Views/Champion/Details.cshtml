@@ -1,0 +1,83 @@
+﻿@model TopicalInfoApp.Models.Champion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Champion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(@Html.DisplayFor(model => model.ImagePath).ToString())" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseHealth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseHealth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseMana)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseMana)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseArmor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseArmor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseMagicResist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseMagicResist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseAttackDamage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseAttackDamage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

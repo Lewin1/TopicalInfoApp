@@ -21,7 +21,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 280,
                 BaseArmor = 30,
                 BaseMagicResist = 30,
-                BaseAttackDamage = 65
+                BaseAttackDamage = 65,
+                ImagePath = "~/Content/Images/ProfilePics/Ashe.png"
 
             });
 
@@ -34,7 +35,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 272.2,
                 BaseArmor = 38,
                 BaseMagicResist = 32,
-                BaseAttackDamage = 69
+                BaseAttackDamage = 69,
+                ImagePath = "~/Content/Images/ProfilePics/Chogath.png"
 
             });
 
@@ -47,7 +49,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 280,
                 BaseArmor = 32,
                 BaseMagicResist = 32,
-                BaseAttackDamage = 55
+                BaseAttackDamage = 55,
+                ImagePath = "~/Content/Images/ProfilePics/Ekko.png"
 
             });
 
@@ -60,7 +63,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 400,
                 BaseArmor = 24,
                 BaseMagicResist = 32,
-                BaseAttackDamage = 59
+                BaseAttackDamage = 59,
+                ImagePath = "~/Content/Images/ProfilePics/Galio.png"
 
             });
 
@@ -73,7 +77,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 300,
                 BaseArmor = 29,
                 BaseMagicResist = 30,
-                BaseAttackDamage = 61
+                BaseAttackDamage = 61,
+                ImagePath = "~/Content/Images/ProfilePics/Jhin.png"
 
             });
 
@@ -86,7 +91,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 410,
                 BaseArmor = 38,
                 BaseMagicResist = 32,
-                BaseAttackDamage = 68
+                BaseAttackDamage = 68,
+                ImagePath = "~/Content/Images/ProfilePics/Kayn.png"
 
             });
 
@@ -99,7 +105,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 384,
                 BaseArmor = 18,
                 BaseMagicResist = 30,
-                BaseAttackDamage = 53
+                BaseAttackDamage = 53,
+                ImagePath = "~/Content/Images/ProfilePics/Lux.png"
 
             });
 
@@ -112,7 +119,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 325.6,
                 BaseArmor = 34,
                 BaseMagicResist = 32,
-                BaseAttackDamage = 67
+                BaseAttackDamage = 67,
+                ImagePath = "~/Content/Images/ProfilePics/Nasus.png"
 
             });
 
@@ -125,7 +133,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 400,
                 BaseArmor = 21,
                 BaseMagicResist = 30,
-                BaseAttackDamage = 55
+                BaseAttackDamage = 55,
+                ImagePath = "~/Content/Images/ProfilePics/Ryze.png"
 
             });
 
@@ -138,7 +147,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 300,
                 BaseArmor = 40,
                 BaseMagicResist = 32,
-                BaseAttackDamage = 55
+                BaseAttackDamage = 55,
+                ImagePath = "~/Content/Images/ProfilePics/Taric.png"
 
             });
 
@@ -151,7 +161,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 392,
                 BaseArmor = 22,
                 BaseMagicResist = 30,
-                BaseAttackDamage = 50
+                BaseAttackDamage = 50,
+                ImagePath = "~/Content/Images/ProfilePics/Veigar.png"
 
             });
 
@@ -164,7 +175,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 300,
                 BaseArmor = 39,
                 BaseMagicResist = 32,
-                BaseAttackDamage = 62
+                BaseAttackDamage = 62,
+                ImagePath = "~/Content/Images/ProfilePics/Yorick.png"
 
             });
 
@@ -177,7 +189,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 0,
                 BaseArmor = 32,
                 BaseMagicResist = 32,
-                BaseAttackDamage = 63
+                BaseAttackDamage = 63,
+                ImagePath = "~/Content/Images/ProfilePics/Zed.png"
 
             });
 
@@ -190,7 +203,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 360,
                 BaseArmor = 24,
                 BaseMagicResist = 30,
-                BaseAttackDamage = 51
+                BaseAttackDamage = 51,
+                ImagePath = "~/Content/Images/ProfilePics/Zilean.png"
 
             });
 
@@ -203,7 +217,8 @@ namespace TopicalInfoApp.DAL
                 BaseMana = 340,
                 BaseArmor = 20,
                 BaseMagicResist = 30,
-                BaseAttackDamage = 56
+                BaseAttackDamage = 56,
+                ImagePath = "~/Content/Images/ProfilePics/Zoe.png"
 
             });
 

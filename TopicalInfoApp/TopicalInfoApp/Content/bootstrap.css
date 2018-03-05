@@ -4058,27 +4058,32 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-header:before,
 .navbar-header:after {
-  display: table;
-  content: " ";
+    display: table;
+    content: " ";
+    height: 180px;
 }
 
 .navbar-header:after {
-  clear: both;
+    clear: both;
+    height: 180px;
 }
 
 .navbar-header:before,
 .navbar-header:after {
-  display: table;
-  content: " ";
+    display: table;
+    content: " ";
+    height: 180px;
 }
 
 .navbar-header:after {
-  clear: both;
+    clear: both;
+    height: 180px;
 }
 
 @media (min-width: 768px) {
   .navbar-header {
     float: left;
+    height: 180px;
   }
 }
 
